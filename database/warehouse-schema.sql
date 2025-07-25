@@ -6,6 +6,7 @@
 
 CREATE SCHEMA `warehouse` ;
 
+# Table for Warehouses 
 CREATE TABLE `warehouse`.`warehouses` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `warehouse_name` VARCHAR(45) NOT NULL,
@@ -17,6 +18,7 @@ CREATE TABLE `warehouse`.`warehouses` (
 ALTER TABLE `warehouse`.`warehouses` 
 CHANGE COLUMN `name` `warehouse_name` VARCHAR(45) NOT NULL ;
 
+# Table for Products
 CREATE TABLE `warehouse`.`products` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `product_name` VARCHAR(45) NOT NULL,
@@ -42,7 +44,8 @@ ADD CONSTRAINT `warehouse_id`
   FOREIGN KEY (`id`)
   REFERENCES `warehouse`.`warehouses` (`id`)
   ON UPDATE CASCADE;
-    
+
+# Table for Customers
 CREATE TABLE `warehouse`.`customers` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `customer_name` VARCHAR(50) NOT NULL,
@@ -50,6 +53,7 @@ CREATE TABLE `warehouse`.`customers` (
   `location` VARCHAR(80) NOT NULL,
   PRIMARY KEY (`id`));
   
+# Table for Orders
 CREATE TABLE `warehouse`.`orders` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `customer_id` INT NOT NULL,
@@ -69,11 +73,15 @@ CREATE TABLE `warehouse`.`orders` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
     
+# Use Mockaroo for record fields to set up inital tables, will edit records to match Tea Theme later
+
+# Records for Warehouses Table
 insert into warehouse.warehouses (warehouse_name, location, capacity) values ('Giant Knotweed', 'San Miguel', 414);
 insert into warehouse.warehouses (warehouse_name, location, capacity) values ('Panamint Milkvetch', 'Godong', 295);
 insert into warehouse.warehouses (warehouse_name, location, capacity) values ('Mexican Buckeye', 'Zolochiv', 353);
 insert into warehouse.warehouses (warehouse_name, location, capacity) values ('Slender Ditch Paspalum', 'Osielsko', 499);
 
+# Records for Products Table
 insert into warehouse.products (product_name, price, description) values ('Ruppiaceae', '37', 'Etiam faucibus cursus urna.');
 insert into warehouse.products (product_name, price, description) values ('Convolvulaceae', '39', 'Integer tincidunt ante vel ipsum.');
 insert into warehouse.products (product_name, price, description) values ('Hydrangeaceae', '27', 'Aliquam sit amet diam in magna bibendum imperdiet.');
@@ -95,6 +103,7 @@ insert into warehouse.products (product_name, price, description) values ('Aster
 insert into warehouse.products (product_name, price, description) values ('Poaceae', '33', 'Proin leo odio, porttitor id, consequat in, consequat ut.');
 insert into warehouse.products (product_name, price, description) values ('Sphagnaceae', '36', 'Nam congue, risus semper porta volutpat, quam pede.');
 
+# Records for Customers Table
 insert into warehouse.customers (customer_name, email, location) values ('Moira Shepard', 'mshepard0@ehow.com', 'North Carolina');
 insert into warehouse.customers (customer_name, email, location) values ('Emili Longmead', 'elongmead1@xing.com', 'Pennsylvania');
 insert into warehouse.customers (customer_name, email, location) values ('Samson Haycraft', 'shaycraft2@moonfruit.com', 'North Carolina');
@@ -116,6 +125,7 @@ insert into warehouse.customers (customer_name, email, location) values ('Eddie 
 insert into warehouse.customers (customer_name, email, location) values ('Rhianon Bridgett', 'rbridgetti@elegantthemes.com', 'Florida');
 insert into warehouse.customers (customer_name, email, location) values ('Berkly Vlach', 'bvlachj@stumbleupon.com', 'New Jersey');
 
+# Records for Orders Table
 insert into warehouse.orders (customer_id, product_id, order_date) values (1, 1, '2025-03-17');
 insert into warehouse.orders (customer_id, product_id, order_date) values (2, 2, '2025-01-24');
 insert into warehouse.orders (customer_id, product_id, order_date) values (3, 3, '2025-03-09');
