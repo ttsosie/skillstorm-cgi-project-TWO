@@ -13,6 +13,9 @@ CREATE TABLE `warehouse`.`warehouses` (
   `capacity` INT NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `name_UNIQUE` (`name` ASC) VISIBLE);
+  
+ALTER TABLE `warehouse`.`warehouses` 
+CHANGE COLUMN `name` `warehouse_name` VARCHAR(45) NOT NULL ;
 
 CREATE TABLE `warehouse`.`products` (
   `id` INT NOT NULL AUTO_INCREMENT,
@@ -26,6 +29,9 @@ CREATE TABLE `warehouse`.`products` (
 ALTER TABLE `warehouse`.`products` 
 DROP COLUMN `warehouse_id`,
 DROP COLUMN `quantity`;
+
+ALTER TABLE `warehouse`.`products` 
+CHANGE COLUMN `name` `product_name` VARCHAR(45) NOT NULL ;
     
 CREATE TABLE `warehouse`.`customers` (
   `id` INT NOT NULL AUTO_INCREMENT,
@@ -52,4 +58,9 @@ CREATE TABLE `warehouse`.`orders` (
     REFERENCES `warehouse`.`products` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
+    
+insert into warehouse.warehouses (warehouse_name, location, capacity) values ('Giant Knotweed', 'San Miguel', 414);
+insert into warehouse.warehouses (warehouse_name, location, capacity) values ('Panamint Milkvetch', 'Godong', 295);
+insert into warehouse.warehouses (warehouse_name, location, capacity) values ('Mexican Buckeye', 'Zolochiv', 353);
+insert into warehouse.warehouses (warehouse_name, location, capacity) values ('Slender Ditch Paspalum', 'Osielsko', 499);
     
