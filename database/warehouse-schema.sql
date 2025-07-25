@@ -94,3 +94,24 @@ insert into warehouse.products (product_name, price, description) values ('Aster
 insert into warehouse.products (product_name, price, description) values ('Asteraceae', '39', 'Morbi odio odio, elementum eu, interdum eu, tincidunto.');
 insert into warehouse.products (product_name, price, description) values ('Poaceae', '33', 'Proin leo odio, porttitor id, consequat in, consequat ut.');
 insert into warehouse.products (product_name, price, description) values ('Sphagnaceae', '36', 'Nam congue, risus semper porta volutpat, quam pede.');
+
+insert into warehouse.customers (customer_name, email, location) values ('Moira Shepard', 'mshepard0@ehow.com', 'North Carolina');
+insert into warehouse.customers (customer_name, email, location) values ('Emili Longmead', 'elongmead1@xing.com', 'Pennsylvania');
+insert into warehouse.customers (customer_name, email, location) values ('Samson Haycraft', 'shaycraft2@moonfruit.com', 'North Carolina');
+insert into warehouse.customers (customer_name, email, location) values ('Walton Abbes', 'wabbes3@moonfruit.com', 'West Virginia');
+insert into warehouse.customers (customer_name, email, location) values ('Darnall Beecker', 'dbeecker4@cdc.gov', 'Missouri');
+insert into warehouse.customers (customer_name, email, location) values ('Obidiah Antoniazzi', 'oantoniazzi5@webmd.com', 'New York');
+insert into warehouse.customers (customer_name, email, location) values ('Edsel Rigard', 'erigard6@blogspot.com', 'Oklahoma');
+insert into warehouse.customers (customer_name, email, location) values ('Dwayne Jickells', 'djickells7@yolasite.com', 'North Carolina');
+insert into warehouse.customers (customer_name, email, location) values ('Prissie Claye', 'pclaye8@prnewswire.com', 'Indiana');
+insert into warehouse.customers (customer_name, email, location) values ('Balduin Sleet', 'bsleet9@php.net', 'Georgia');
+insert into warehouse.customers (customer_name, email, location) values ('Dorolisa Well', 'dwella@eepurl.com', 'New York');
+insert into warehouse.customers (customer_name, email, location) values ('Ellary Lilly', 'elillyb@symantec.com', 'Arizona');
+insert into warehouse.customers (customer_name, email, location) values ('Dan Bordone', 'dbordonec@parallels.com', 'Massachusetts');
+insert into warehouse.customers (customer_name, email, location) values ('Janie Habbin', 'jhabbind@umich.edu', 'Colorado');
+insert into warehouse.customers (customer_name, email, location) values ('Gretal Murrhaupt', 'gmurrhaupte@cbsnews.com', 'Wisconsin');
+insert into warehouse.customers (customer_name, email, location) values ('Rosabelle Collumbine', 'rcollumbinef@illinois.edu', 'Arizona');
+insert into warehouse.customers (customer_name, email, location) values ('Ermanno Ransome', 'eransomeg@forbes.com', 'Minnesota');
+insert into warehouse.customers (customer_name, email, location) values ('Eddie Ackeroyd', 'eackeroydh@timesonline.co.uk', 'California');
+insert into warehouse.customers (customer_name, email, location) values ('Rhianon Bridgett', 'rbridgetti@elegantthemes.com', 'Florida');
+insert into warehouse.customers (customer_name, email, location) values ('Berkly Vlach', 'bvlachj@stumbleupon.com', 'New Jersey');
