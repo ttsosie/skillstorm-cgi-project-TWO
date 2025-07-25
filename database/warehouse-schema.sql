@@ -115,3 +115,24 @@ insert into warehouse.customers (customer_name, email, location) values ('Ermann
 insert into warehouse.customers (customer_name, email, location) values ('Eddie Ackeroyd', 'eackeroydh@timesonline.co.uk', 'California');
 insert into warehouse.customers (customer_name, email, location) values ('Rhianon Bridgett', 'rbridgetti@elegantthemes.com', 'Florida');
 insert into warehouse.customers (customer_name, email, location) values ('Berkly Vlach', 'bvlachj@stumbleupon.com', 'New Jersey');
+
+insert into warehouse.orders (customer_id, product_id, order_date) values (1, 1, '2025-03-17');
+insert into warehouse.orders (customer_id, product_id, order_date) values (2, 2, '2025-01-24');
+insert into warehouse.orders (customer_id, product_id, order_date) values (3, 3, '2025-03-09');
+insert into warehouse.orders (customer_id, product_id, order_date) values (4, 4, '2025-03-06');
+insert into warehouse.orders (customer_id, product_id, order_date) values (5, 5, '2024-07-27');
+insert into warehouse.orders (customer_id, product_id, order_date) values (6, 6, '2024-09-10');
+insert into warehouse.orders (customer_id, product_id, order_date) values (7, 7, '2025-04-08');
+insert into warehouse.orders (customer_id, product_id, order_date) values (8, 8, '2024-12-04');
+insert into warehouse.orders (customer_id, product_id, order_date) values (9, 9, '2025-07-04');
+insert into warehouse.orders (customer_id, product_id, order_date) values (10, 10, '2025-06-12');
+insert into warehouse.orders (customer_id, product_id, order_date) values (11, 11, '2025-04-12');
+insert into warehouse.orders (customer_id, product_id, order_date) values (12, 12, '2025-05-27');
+insert into warehouse.orders (customer_id, product_id, order_date) values (13, 13, '2025-07-04');
+insert into warehouse.orders (customer_id, product_id, order_date) values (14, 14, '2024-08-24');
+insert into warehouse.orders (customer_id, product_id, order_date) values (15, 15, '2024-11-24');
+insert into warehouse.orders (customer_id, product_id, order_date) values (16, 16, '2024-11-27');
+insert into warehouse.orders (customer_id, product_id, order_date) values (17, 17, '2025-06-26');
+insert into warehouse.orders (customer_id, product_id, order_date) values (18, 18, '2024-07-30');
+insert into warehouse.orders (customer_id, product_id, order_date) values (19, 19, '2025-06-29');
+insert into warehouse.orders (customer_id, product_id, order_date) values (20, 20, '2024-12-09');
