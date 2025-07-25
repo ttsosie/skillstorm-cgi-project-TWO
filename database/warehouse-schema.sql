@@ -32,6 +32,16 @@ DROP COLUMN `quantity`;
 
 ALTER TABLE `warehouse`.`products` 
 CHANGE COLUMN `name` `product_name` VARCHAR(45) NOT NULL ;
+
+ALTER TABLE `warehouse`.`products` 
+DROP FOREIGN KEY `warehouse_id`;
+ALTER TABLE `warehouse`.`products` 
+CHANGE COLUMN `id` `id` INT NOT NULL ;
+ALTER TABLE `warehouse`.`products` 
+ADD CONSTRAINT `warehouse_id`
+  FOREIGN KEY (`id`)
+  REFERENCES `warehouse`.`warehouses` (`id`)
+  ON UPDATE CASCADE;
     
 CREATE TABLE `warehouse`.`customers` (
   `id` INT NOT NULL AUTO_INCREMENT,
@@ -63,4 +73,24 @@ insert into warehouse.warehouses (warehouse_name, location, capacity) values ('G
 insert into warehouse.warehouses (warehouse_name, location, capacity) values ('Panamint Milkvetch', 'Godong', 295);
 insert into warehouse.warehouses (warehouse_name, location, capacity) values ('Mexican Buckeye', 'Zolochiv', 353);
 insert into warehouse.warehouses (warehouse_name, location, capacity) values ('Slender Ditch Paspalum', 'Osielsko', 499);
-    
+
+insert into warehouse.products (product_name, price, description) values ('Ruppiaceae', '37', 'Etiam faucibus cursus urna.');
+insert into warehouse.products (product_name, price, description) values ('Convolvulaceae', '39', 'Integer tincidunt ante vel ipsum.');
+insert into warehouse.products (product_name, price, description) values ('Hydrangeaceae', '27', 'Aliquam sit amet diam in magna bibendum imperdiet.');
+insert into warehouse.products (product_name, price, description) values ('Burmanniaceae', '42', 'Proin eu mi.');
+insert into warehouse.products (product_name, price, description) values ('Polypodiaceae', '24', 'Donec ut mauris eget massa tempor convallis.');
+insert into warehouse.products (product_name, price, description) values ('Oxalidaceae', '23', 'Duis aliquam convallis nunc.');
+insert into warehouse.products (product_name, price, description) values ('Fabaceae', '25', 'Aliquam non mauris. Morbi non lectus.');
+insert into warehouse.products (product_name, price, description) values ('Asteraceae', '43', 'Morbi non lectus.');
+insert into warehouse.products (product_name, price, description) values ('Verbenaceae', '42', 'Donec ut mauris eget massa tempor convallis.');
+insert into warehouse.products (product_name, price, description) values ('Boraginaceae', '38', 'In eleifend quam a odio.');
+insert into warehouse.products (product_name, price, description) values ('Agavaceae', '40', 'Donec posuere metus vitae ipsum. Aliquam non mauris.');
+insert into warehouse.products (product_name, price, description) values ('Oleaceae', '26', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.');
+insert into warehouse.products (product_name, price, description) values ('Caryophyllaceae', '28', 'Vivamus tortor. Duis mattis egestas metus.');
+insert into warehouse.products (product_name, price, description) values ('Fabaceae', '35', 'Phasellus id sapien in sapien iaculis congue.');
+insert into warehouse.products (product_name, price, description) values ('Sarraceniaceae', '36', 'Vestibulum ante ipsum primis in faucibus or.');
+insert into warehouse.products (product_name, price, description) values ('Magnoliaceae', '33', 'In tempor, turpis nec euismod scelerisque.');
+insert into warehouse.products (product_name, price, description) values ('Asteraceae', '26', 'In blandit ultrices enim. Lorem ipsum dolor sit amet.');
+insert into warehouse.products (product_name, price, description) values ('Asteraceae', '39', 'Morbi odio odio, elementum eu, interdum eu, tincidunto.');
+insert into warehouse.products (product_name, price, description) values ('Poaceae', '33', 'Proin leo odio, porttitor id, consequat in, consequat ut.');
+insert into warehouse.products (product_name, price, description) values ('Sphagnaceae', '36', 'Nam congue, risus semper porta volutpat, quam pede.');
