@@ -6,14 +6,14 @@
 
 CREATE SCHEMA `warehouse` ;
 
-# Table for Warehouses - id, name, state
+# Table for Warehouses - id (AutoIncrement), name, state
 CREATE TABLE `warehouse`.`warehouses` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `warehouse_name` VARCHAR(45) NOT NULL,
   `state` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`));
 
-# Table for Products - id, name, price, detail, warehouse location, quantity
+# Table for Products - id (AutoIncrement), name, price, detail, warehouse location, quantity
 CREATE TABLE `warehouse`.`products` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `product_name` VARCHAR(45) NOT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE `warehouse`.`products` (
     ON DELETE NO ACTION
     ON UPDATE CASCADE);
     
-# Table for Customers - id, first name, last name, email, state
+# Table for Customers - id (AutoIncrement), first name, last name, email, state
 CREATE TABLE `warehouse`.`customers` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `first_name` VARCHAR(45) NOT NULL,
@@ -38,7 +38,7 @@ CREATE TABLE `warehouse`.`customers` (
   `state` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`));
   
-# Table for Orders - id, customer id, product id
+# Table for Orders - id (AutoIncrement), customer id, product id
 CREATE TABLE `warehouse`.`orders` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `customer_id` INT NOT NULL,
@@ -58,12 +58,14 @@ CREATE TABLE `warehouse`.`orders` (
     ON DELETE CASCADE
     ON UPDATE CASCADE);
     
-# Insert 2 warehouses
+# Insert 2x records into table warehouses with fields - name, state
+INSERT INTO warehouse.warehouses (warehouse_name, state) VALUES ('Golden Leaf', 'CA');
+INSERT INTO warehouse.warehouses (warehouse_name, state) VALUES ('Cloudberry Demure Ware', 'NY');
 
-# Insert 20 records into tea brand products
+# Insert 20x records into products table for tea consumables with fields - name, price, detail, warehouse location, quantity
 
-# Insert 20 records into tea dishware products
+# Insert 20x records into products table for tea accessories with fields - name, price, detail, warehouse location, quantity
 
-# Insert 20 customer records
+# Insert 20x records into customers table with fields - first name, last name, email, state
 
-# Insert 20 order records
+# Insert 20x records into orders table with fields - customer id, product id
