@@ -4,9 +4,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.skillSTORM.warehouse_api.dtos.WarehousesDTO;
 import com.skillSTORM.warehouse_api.models.Warehouses;
 import com.skillSTORM.warehouse_api.services.WarehousesService;
 
@@ -42,6 +45,10 @@ public class WarehousesController {
 	}
 	
 	// If user wanted to create a warehouse 
+	@PostMapping
+	public ResponseEntity<Warehouses> createOne(@RequestBody WarehousesDTO dto){
+		return this.service.createOne(dto);
+	}
 	
 	// If user wanted to update a warehouse id
 

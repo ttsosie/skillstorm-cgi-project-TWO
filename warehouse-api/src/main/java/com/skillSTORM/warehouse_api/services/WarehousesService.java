@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import com.skillSTORM.warehouse_api.dtos.WarehousesDTO;
 import com.skillSTORM.warehouse_api.models.Warehouses;
 import com.skillSTORM.warehouse_api.repositories.WarehousesRepository;
 
@@ -52,7 +53,11 @@ public class WarehousesService {
 		return ResponseEntity.noContent().build();
 	}
 	
-	// If user wanted to create a warehouse 
+	// If user wanted to create a warehouse - id, name, state
+	public ResponseEntity<Warehouses> createOne(WarehousesDTO dto){
+		return ResponseEntity.status(HttpStatus.CREATED)
+				.body(this.repo.save(new Warehouses(0, dto.warehouseName(), dto.state())));
+	}
 	
 	// If user wanted to update a warehouse id
 
