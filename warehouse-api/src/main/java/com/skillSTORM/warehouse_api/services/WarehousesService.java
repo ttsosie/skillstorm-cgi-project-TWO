@@ -45,5 +45,11 @@ public class WarehousesService {
 		
 		return ResponseEntity.notFound().build();
 	}
+	
+	// If user needed to delete a warehouse by a specific id
+	public ResponseEntity<Void> deleteById(int id){
+		this.repo.deleteById(id);
+		return ResponseEntity.noContent().build();
+	}
 
 }

@@ -1,6 +1,7 @@
 package com.skillSTORM.warehouse_api.controllers;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,6 +33,12 @@ public class WarehousesController {
 	@GetMapping("/{warehouseId}")
 	public ResponseEntity<Warehouses> findById(@PathVariable("warehouseId") int id){
 		return this.service.findById(id);
+	}
+	
+	//When user wants to delete a warehouse by id
+	@DeleteMapping("/{id}")
+	public ResponseEntity<Void> deleteById(@PathVariable int id){
+		return this.service.deleteById(id);
 	}
 
 }
