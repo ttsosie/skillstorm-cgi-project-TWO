@@ -28,6 +28,7 @@ public class WarehousesController {
 		return this.service.finalAll(); //not happy when changed WarehousesServices to return a response entity
 	}
 	
+	//When user wants to look up an id like localhost:8080/warehouses/2 
 	@GetMapping("/{warehouseId}")
 	public ResponseEntity<Warehouses> findById(@PathVariable("warehouseId") int id){
 		return this.service.findById(id);
