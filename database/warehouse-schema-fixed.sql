@@ -62,7 +62,7 @@ CREATE TABLE `warehouse`.`orders` (
 INSERT INTO warehouse.warehouses (warehouse_name, state) VALUES ('Golden Leaf', 'CA');
 INSERT INTO warehouse.warehouses (warehouse_name, state) VALUES ('Cloudberry Demure Ware', 'NY');
 
-# Insert 20x records into products table for Golden Leaf warehouse_id=1 - name, price, detail, warehouse location, quantity
+# Insert 20x records into products table for Golden Leaf warehouse_id=1 - name, price, details, warehouse location, quantity
 INSERT INTO warehouse.products (product_name, price, details, warehouse_id, quantity) VALUES
 ('Moonlit Jasmine', 12.50, 'Delicate green tea scented with jasmine flowers', 1, 100),
 ('Crimson Chai', 11.25, 'Spiced black tea with hints of cinnamon and clove', 1, 85),
@@ -85,7 +85,28 @@ INSERT INTO warehouse.products (product_name, price, details, warehouse_id, quan
 ('Caramel Pu-erh', 13.40, 'Earthy pu-erh tea sweetened with caramel', 1, 40),
 ('Mint Cocoa Dream', 10.99, 'Peppermint tea with cacao husks and vanilla', 1, 60);
 
-# Insert 20x records into products table for tea accessories with fields - name, price, detail, warehouse location, quantity
+# Insert 20x records into products table for Cloudberry Demure Ware warehouse_id=2 - name, price, details, warehouse location, quantity
+INSERT INTO warehouse.products (product_name, price, details, warehouse_id, quantity) VALUES
+('Celadon Teacup Set', 24.99, 'Set of 4 pale green porcelain teacups', 2, 40),
+('Moonstone Infuser Mug', 18.50, 'Glass mug with moon-etched stainless steel infuser', 2, 60),
+('Bamboo Matcha Whisk', 11.95, '80-prong chasen for ceremonial matcha prep', 2, 50),
+('Tea Leaf Spoon', 6.75, 'Vintage brass spoon shaped like a tea leaf', 2, 80),
+('Cloud Steep Kettle', 39.99, 'White ceramic stovetop kettle with wood handle', 2, 25),
+('Cherrywood Tea Tray', 22.40, 'Slotted draining tray for gongfu ceremonies', 2, 30),
+('Blossom Tea Towels', 9.95, 'Floral-embroidered soft cotton cloths', 2, 70),
+('Gongfu Gaiwan', 16.90, 'Lidded bowl for elegant Chinese steeping', 2, 45),
+('Rose Quartz Timer', 5.50, 'Hourglass sand timer for 3/5/7 minute steeps', 2, 100),
+('Butterfly Lid Rest', 3.25, 'Porcelain rest for teapot lids or strainers', 2, 90),
+('Sakura Tea Jar', 12.80, 'Airtight ceramic jar for loose tea storage', 2, 60),
+('Herbalist’s Scoop', 7.40, 'Hand-carved wooden tea scoop', 2, 85),
+('Blooming Teapot', 27.99, 'Clear glass pot for blooming tea flowers', 2, 20),
+('Mystic Warmer', 14.50, 'Candle-heated ceramic base to keep tea warm', 2, 35),
+('Lotus Strainer Set', 10.60, 'Decorative flower-shaped infuser with dish', 2, 50),
+('Cast Iron Serenity Pot', 44.00, 'Matte black teapot with lotus engraving', 2, 15),
+('Steeping Wand', 8.25, 'Slender steel infuser wand for mugs or flasks', 2, 75),
+('Traveler’s Flask', 20.95, 'Insulated bottle with built-in tea basket', 2, 40),
+('Zen Kettle', 36.80, 'Electric kettle with variable temp presets', 2, 18),
+('Whispering Coaster Set', 9.99, 'Soft cork coasters with tea quotes', 2, 90);
 
 # Insert 20x records into customers table with fields - first name, last name, email, state
 
