@@ -26,6 +26,17 @@ public class Warehouses {
 	@Column
 	private String state;
 	
+	public Warehouses() {
+		super();
+	}
+	
+	public Warehouses(int id, String warehouseName, String state) {
+		super();
+		this.id = id;
+		this.warehouseName = warehouseName;
+		this.state = state;
+	}
+	
 	public int getId() {
 		return id;
 	}
