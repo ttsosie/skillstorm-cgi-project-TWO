@@ -1,0 +1,28 @@
+{
+	"info": {
+		"_postman_id": "ef8481b0-7fa6-4675-8e3f-c35d7aba6eb5",
+		"name": "Warehouse API Project2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26834563"
+	},
+	"item": [
+		{
+			"name": "warehouses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/warehouses",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"warehouses"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
