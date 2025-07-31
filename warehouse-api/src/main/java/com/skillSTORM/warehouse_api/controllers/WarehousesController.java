@@ -2,6 +2,7 @@ package com.skillSTORM.warehouse_api.controllers;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,6 +26,11 @@ public class WarehousesController {
 	@GetMapping
 	public ResponseEntity<Iterable<Warehouses>> findAll() {
 		return this.service.finalAll(); //not happy when changed WarehousesServices to return a response entity
+	}
+	
+	@GetMapping("/{warehouseId}")
+	public ResponseEntity<Warehouses> findById(@PathVariable("warehouseId") int id){
+		return this.service.findById(id);
 	}
 
 }
