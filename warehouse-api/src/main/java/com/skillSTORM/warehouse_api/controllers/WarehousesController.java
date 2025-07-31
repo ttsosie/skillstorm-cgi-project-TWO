@@ -1,6 +1,6 @@
 package com.skillSTORM.warehouse_api.controllers;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,12 +12,16 @@ import com.skillSTORM.warehouse_api.services.WarehousesService;
 @RequestMapping("/warehouses")
 public class WarehousesController {
 	
-	@Autowired
-	private WarehousesService service;
+	//Filled up with Singleton Service
+	private final WarehousesService service;
+	
+	public WarehousesController(WarehousesService service) {
+		this.service = service;
+	}
 	
 	@GetMapping
-	public Iterable<Warehouses> findAll() {
-		return this.service.finalAll();
+	public ResponseEntity<Iterable<Warehouses>> findAll() {
+		return this.service.finalAll(); //not happy when changed WarehousesServices to return a response entity
 	}
 
 }
