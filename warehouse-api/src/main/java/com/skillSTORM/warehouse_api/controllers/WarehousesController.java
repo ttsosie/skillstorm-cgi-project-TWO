@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.skillSTORM.warehouse_api.models.Warehouses;
 import com.skillSTORM.warehouse_api.services.WarehousesService;
 
+// Reaches out to service to run logic but not the repository, that's the service's job
+// This IS-A BEAN
+
 @RestController
 @RequestMapping("/warehouses")
 public class WarehousesController {

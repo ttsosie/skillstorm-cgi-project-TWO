@@ -1,5 +1,7 @@
 package com.skillSTORM.warehouse_api.services;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,7 +25,7 @@ public class WarehousesService {
 		this.repo = repo;
 	}
 	
-	
+	// To get back all of the existing warehouses
 	public ResponseEntity<Iterable<Warehouses>> finalAll(){
 		Iterable<Warehouses> warehouses = this.repo.findAll();
 		if (!warehouses.iterator().hasNext())
@@ -31,6 +33,17 @@ public class WarehousesService {
 								 .body(null);
 		
 		return ResponseEntity.ok(warehouses);
+	}
+	
+	// To get a specific warehouse by id
+	public ResponseEntity<Warehouses> findById(int id){
+		Optional<Warehouses> warehouse = this.repo.findById(id);
+		
+		if(warehouse.isPresent()) { // Using Optional gives the isPresent or isEmpty option from CRUD
+			return ResponseEntity.ok(warehouse.get());
+		}
+		
+		return ResponseEntity.notFound().build();
 	}
 
 }
