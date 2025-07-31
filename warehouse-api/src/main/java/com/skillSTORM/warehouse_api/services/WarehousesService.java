@@ -51,5 +51,9 @@ public class WarehousesService {
 		this.repo.deleteById(id);
 		return ResponseEntity.noContent().build();
 	}
+	
+	// If user wanted to create a warehouse 
+	
+	// If user wanted to update a warehouse id
 
 }

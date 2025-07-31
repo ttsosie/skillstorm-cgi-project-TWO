@@ -40,5 +40,9 @@ public class WarehousesController {
 	public ResponseEntity<Void> deleteById(@PathVariable int id){
 		return this.service.deleteById(id);
 	}
+	
+	// If user wanted to create a warehouse 
+	
+	// If user wanted to update a warehouse id
 
 }
