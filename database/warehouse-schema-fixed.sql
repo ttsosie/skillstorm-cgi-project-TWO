@@ -109,5 +109,26 @@ INSERT INTO warehouse.products (product_name, price, details, warehouse_id, quan
 ('Whispering Coaster Set', 9.99, 'Soft cork coasters with tea quotes', 2, 90);
 
 # Insert 20x records into customers table with fields - first name, last name, email, state
+INSERT INTO warehouse.customers (first_name, last_name, email, state) VALUES
+('Frodo', 'Baggins', 'orcslayer23@gmail.com', 'CA'),
+('Gandalf', 'TheGrey', 'sunnyskies101@yahoo.com', 'OR'),
+('Arwen', 'Undomiel', 'dwarfdelight@hotmail.com', 'NY'),
+('Thorin', 'Oakenshield', 'elvenwhispers@gmail.com', 'WA'),
+('Galadriel', 'Lightbearer', 'goblinenergy@aol.com', 'CO'),
+('Legolas', 'Greenleaf', 'mudpiesmash@ymail.com', 'VT'),
+('Bilbo', 'Baggins', 'trollhugz2020@gmail.com', 'TX'),
+('Eowyn', 'Shieldmaiden', 'bubbleteaqueen@yahoo.com', 'IL'),
+('Gollum', 'Slinker', 'brightdaysonly@gmail.com', 'AZ'),
+('Samwise', 'Gamgee', 'ringfiend420@hotmail.com', 'NC'),
+('Saruman', 'TheWhite', 'sunshinewizard@gmail.com', 'MA'),
+('Elrond', 'Peredhel', 'orc4life@hotmail.com', 'WA'),
+('Rosie', 'Cotton', 'darkbrew666@gmail.com', 'GA'),
+('Faramir', 'Steward', 'dragonzrule@gmail.com', 'FL'),
+('Merry', 'Brandybuck', 'balrogfriend@yahoo.com', 'TN'),
+('Pippin', 'Took', 'mountdoomfan@gmail.com', 'MO'),
+('Thranduil', 'Oropherion', 'dwarffandom@gmail.com', 'MI'),
+('Sauron', 'TheDeceiver', 'happymornings@aol.com', 'NV'),
+('Treebeard', 'Elderbark', 'tinyteaspoon@yahoo.com', 'ME'),
+('Luthien', 'Tinuviel', 'orcishromance@gmail.com', 'PA');
 
-# Insert 20x records into orders table with fields - customer id, product id
+# Insert 20x records into orders table with fields - customer id, product id, date
