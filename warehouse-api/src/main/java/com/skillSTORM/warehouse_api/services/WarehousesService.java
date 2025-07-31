@@ -53,12 +53,18 @@ public class WarehousesService {
 		return ResponseEntity.noContent().build();
 	}
 	
-	// If user wanted to create a warehouse - id, name, state
+	// If user wanted to create a warehouse - id(don't care about), name, state
 	public ResponseEntity<Warehouses> createOne(WarehousesDTO dto){
 		return ResponseEntity.status(HttpStatus.CREATED)
 				.body(this.repo.save(new Warehouses(0, dto.warehouseName(), dto.state())));
 	}
 	
 	// If user wanted to update a warehouse id
+	public ResponseEntity<Warehouses> updateOne(int id, WarehousesDTO dto){
+		if(this.repo.existsById(id)) {
+			return ResponseEntity.ok(this.repo.save(new Warehouses(id, dto.warehouseName(), dto.state())));
+		}
+		return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+	}
 
 }
