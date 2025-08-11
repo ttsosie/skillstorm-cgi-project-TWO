@@ -55,6 +55,6 @@ public class ProductsController {
 		@PutMapping("/{id}")
 		public ResponseEntity<Products> updateOne(@PathVariable int id, @RequestBody ProductsDTO dto){
 			return this.service.updateOne(id, dto);
-		}
+	}
 
 }
