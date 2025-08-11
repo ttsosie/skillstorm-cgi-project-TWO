@@ -53,7 +53,7 @@ private final CustomersRepository repo;
 		return ResponseEntity.status(HttpStatus.OK).build();
 	}
 	
-	// If user wanted to create a customer - id(don't care about), name, price, details, warehouseId (where it's stored), quantity
+	// If user wanted to create a customer - id(don't care about)
 	public ResponseEntity<Customers> createOne(CustomersDTO dto){
 		return ResponseEntity.status(HttpStatus.CREATED)
 				.body(this.repo.save(
