@@ -1,0 +1,232 @@
+{
+	"info": {
+		"_postman_id": "ef8481b0-7fa6-4675-8e3f-c35d7aba6eb5",
+		"name": "Warehouse API Project2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26834563"
+	},
+	"item": [
+		{
+			"name": "warehouses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/warehouses",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"warehouses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/warehouses/2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/warehouses/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"warehouses",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/warehouses/2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/warehouses/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"warehouses",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/warehouses",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"warehouseName\": \"Branching TeaCups\",\n    \"state\": \"NM\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/warehouses",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"warehouses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/warehouses/3",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"warehouseName\": \"Cottage Blue Pea Butterfly\"\n    \"state\": \"NV\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/warehouses/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"warehouses",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/products/4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/products/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/products",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/customers/5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/customers/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/customers",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/orders/7",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/orders/7",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
