@@ -62,7 +62,7 @@ public class WarehousesService {
 	// If user wanted to update a warehouse id
 	public ResponseEntity<Warehouses> updateOne(int id, WarehousesDTO dto){
 		if(this.repo.existsById(id)) {
-			return ResponseEntity.ok(this.repo.save(new Warehouses(id, dto.warehouseName(), dto.state())));
+			return ResponseEntity.ok(this.repo.save(new Warehouses(0, dto.warehouseName(), dto.state())));
 		}
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 	}

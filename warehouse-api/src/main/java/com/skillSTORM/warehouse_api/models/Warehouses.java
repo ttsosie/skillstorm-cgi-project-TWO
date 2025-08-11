@@ -1,10 +1,13 @@
 package com.skillSTORM.warehouse_api.models;
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 //this annotation states that this class is a DB entity
@@ -25,6 +28,10 @@ public class Warehouses {
 	
 	@Column
 	private String state;
+	
+	//One warehouse can hold many of a type product
+	@OneToMany(mappedBy = "warehouseId")
+	private List<Products> products;
 	
 	public Warehouses() {
 		super();

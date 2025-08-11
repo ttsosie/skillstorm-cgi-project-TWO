@@ -5,6 +5,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 //this annotation states that this class is a DB entity
@@ -28,8 +30,10 @@ public class Products {
 		@Column
 		private String details;
 		
-		@Column
-		private int warehouseId;
+		//Many of the product type goes to 1 warehouse of Warehouse type
+		@ManyToOne
+		@JoinColumn(name = "warehouse_id", referencedColumnName = "id")
+		private Warehouses warehouseId;
 		
 		@Column
 		private int quantity;
@@ -38,7 +42,7 @@ public class Products {
 			super();
 		}
 		
-		public Products(int id, String productName, double price, String details, int warehouseId, int quantity) {
+		public Products(int id, String productName, double price, String details,Warehouses warehouseId, int quantity) {
 			super();
 			this.id = id;
 			this.productName = productName;
@@ -80,11 +84,11 @@ public class Products {
 			this.details = details;
 		}
 
-		public int getWarehouseId() {
+		public Warehouses getWarehouseId() {
 			return warehouseId;
 		}
 
-		public void setWarehouseId(int warehouseId) {
+		public void setWarehouseId(Warehouses warehouseId) {
 			this.warehouseId = warehouseId;
 		}
 

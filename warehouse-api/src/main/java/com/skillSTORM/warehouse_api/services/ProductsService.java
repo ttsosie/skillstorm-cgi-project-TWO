@@ -59,7 +59,7 @@ private final ProductsRepository repo;
 		return ResponseEntity.status(HttpStatus.CREATED)
 				.body(this.repo.save(
 						new Products(
-						0, 
+						0,
 						dto.productName(), 
 						dto.price(), 
 						dto.details(), 
