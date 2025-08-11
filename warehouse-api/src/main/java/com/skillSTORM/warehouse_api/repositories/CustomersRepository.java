@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.skillSTORM.warehouse_api.models.Customers;
 
 @Repository
-public interface CustomersRespository extends CrudRepository<Customers, Integer>{
+public interface CustomersRepository extends CrudRepository<Customers, Integer>{
 
 }
