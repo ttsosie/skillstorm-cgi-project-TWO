@@ -50,7 +50,7 @@ public class WarehousesService {
 	// If user needed to delete a warehouse by a specific id
 	public ResponseEntity<Void> deleteById(int id){
 		this.repo.deleteById(id);
-		return ResponseEntity.noContent().build();
+		return ResponseEntity.status(HttpStatus.OK).build();
 	}
 	
 	// If user wanted to create a warehouse - id(don't care about), name, state
