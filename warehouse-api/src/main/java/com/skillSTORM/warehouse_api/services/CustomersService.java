@@ -27,7 +27,7 @@ private final CustomersRepository repo;
 	}
 	
 	// To get back all of the existing Customers
-	public ResponseEntity<Iterable<Customers>> finalAll(){
+	public ResponseEntity<Iterable<Customers>> findAll(){
 		Iterable<Customers> customers = this.repo.findAll();
 		if (!customers.iterator().hasNext())
 			return ResponseEntity.status(HttpStatus.NOT_FOUND)

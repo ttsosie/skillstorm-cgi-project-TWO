@@ -29,7 +29,7 @@ public class CustomersController {
 	
 	@GetMapping
 	public ResponseEntity<Iterable<Customers>> findAll() {
-		return this.service.finalAll(); //not happy when changed CustomersServices to return a response entity
+		return this.service.findAll(); //not happy when changed CustomersServices to return a response entity
 	}
 	
 	//When user wants to look up an id like localhost:8080/products/2 

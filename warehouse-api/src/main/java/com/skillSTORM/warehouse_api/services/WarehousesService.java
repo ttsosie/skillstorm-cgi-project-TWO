@@ -27,7 +27,7 @@ public class WarehousesService {
 	}
 	
 	// To get back all of the existing warehouses
-	public ResponseEntity<Iterable<Warehouses>> finalAll(){
+	public ResponseEntity<Iterable<Warehouses>> findAll(){
 		Iterable<Warehouses> warehouses = this.repo.findAll();
 		if (!warehouses.iterator().hasNext())
 			return ResponseEntity.status(HttpStatus.NOT_FOUND)

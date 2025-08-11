@@ -30,7 +30,7 @@ public class ProductsController {
 		
 		@GetMapping
 		public ResponseEntity<Iterable<Products>> findAll() {
-			return this.service.finalAll(); //not happy when changed ProductsServices to return a response entity
+			return this.service.findAll(); //not happy when changed ProductsServices to return a response entity
 		}
 		
 		//When user wants to look up an id like localhost:8080/products/2 

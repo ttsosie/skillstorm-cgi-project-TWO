@@ -26,7 +26,7 @@ private final OrdersRepository repo;
 	}
 	
 	// To get back all of the existing Orders
-	public ResponseEntity<Iterable<Orders>> finalAll(){
+	public ResponseEntity<Iterable<Orders>> findAll(){
 		Iterable<Orders> orders = this.repo.findAll();
 		if (!orders.iterator().hasNext())
 			return ResponseEntity.status(HttpStatus.NOT_FOUND)

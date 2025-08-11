@@ -30,7 +30,7 @@ public class WarehousesController {
 	
 	@GetMapping
 	public ResponseEntity<Iterable<Warehouses>> findAll() {
-		return this.service.finalAll(); //not happy when changed WarehousesServices to return a response entity
+		return this.service.findAll(); //not happy when changed WarehousesServices to return a response entity
 	}
 	
 	//When user wants to look up an id like localhost:8080/warehouses/2 

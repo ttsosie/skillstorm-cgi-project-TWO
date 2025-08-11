@@ -28,7 +28,7 @@ private final ProductsRepository repo;
 	}
 	
 	// To get back all of the existing warehouses
-	public ResponseEntity<Iterable<Products>> finalAll(){
+	public ResponseEntity<Iterable<Products>> findAll(){
 		Iterable<Products> products = this.repo.findAll();
 		if (!products.iterator().hasNext())
 			return ResponseEntity.status(HttpStatus.NOT_FOUND)
