@@ -33,7 +33,7 @@ public class OrdersController {
 	
 	//When user wants to look up an id like localhost:8080/products/2 
 	@GetMapping("/{orderId}")
-	public ResponseEntity<Orders> findById(@PathVariable("customerId") int id){
+	public ResponseEntity<Orders> findById(@PathVariable("orderId") int id){
 		return this.service.findById(id);
 	}
 	
